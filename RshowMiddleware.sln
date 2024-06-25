@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RshowMiddleware", "RshowMiddleware\RshowMiddleware.csproj", "{F0220706-7304-4F4F-9376-B7292935938A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp\Assembly-CSharp.csproj", "{5B0A33C7-BEC6-4A7E-A2A6-CEBF64D2EC7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0220706-7304-4F4F-9376-B7292935938A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0220706-7304-4F4F-9376-B7292935938A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0220706-7304-4F4F-9376-B7292935938A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0220706-7304-4F4F-9376-B7292935938A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0A33C7-BEC6-4A7E-A2A6-CEBF64D2EC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0A33C7-BEC6-4A7E-A2A6-CEBF64D2EC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0A33C7-BEC6-4A7E-A2A6-CEBF64D2EC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0A33C7-BEC6-4A7E-A2A6-CEBF64D2EC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
