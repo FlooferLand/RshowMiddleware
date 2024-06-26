@@ -9,7 +9,7 @@ using RshowMiddleware;
 //       so people can more easily open and modify the interior file
 
 internal static class Program {
-    private const string InputPath = "D:/Creative Engineering/Show tapes/Monkees Medley.rshw";
+    private const string InputPath = "C:/Users/FlooferLand/Desktop/looney.rshw";
     private const string OutputPath = $"C:/Users/FlooferLand/Desktop/";
 
     private static void Main(string[] stringArgs) {

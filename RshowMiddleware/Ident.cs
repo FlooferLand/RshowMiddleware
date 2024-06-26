@@ -8,9 +8,9 @@ public enum Ident {
 }
 
 public static class Idents {
-    private static readonly byte[] SignalBytes = RawData.MakeIdent(new byte[] { 0x1A, /* Reserved */ 0x00 });
-    private static readonly byte[] AudioBytes  = RawData.MakeIdent(new byte[] { 0x2A, /* Reserved */ 0x00 });
-    private static readonly byte[] VideoBytes  = RawData.MakeIdent(new byte[] { 0x3A, /* Reserved */ 0x00 });
+    private static readonly byte[] SignalBytes = RawData.MakeIdent(new byte[] { 0xA0 });
+    private static readonly byte[] AudioBytes  = RawData.MakeIdent(new byte[] { 0xB0 });
+    private static readonly byte[] VideoBytes  = RawData.MakeIdent(new byte[] { 0xC0 });
 
     public static byte[] toBytes(Ident ident) {
         return ident switch {
