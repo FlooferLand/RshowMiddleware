@@ -3,7 +3,7 @@ namespace RshowMiddleware;
 public static class Args {
     private static Dictionary<string, Arg> args = new();
     public static void Add(string key, string value) {
-        args.Add(key.ToLower(), new Arg(value.ToLower()));
+        args.Add(key.ToLower(), new Arg(value));
     }
         
     public static Arg? Get(string key) {
@@ -22,6 +22,9 @@ public class Arg {
     private readonly string value;
     public Arg(string value) {
         this.value = value;
+    }
+    public string GetString() {
+        return value;
     }
     public bool IsTrue() {
         return new[] { "1", "true" }.Contains(value.ToLower());

@@ -4,19 +4,13 @@ namespace RshowMiddleware;
 
 public static class DataConverter {
     public const string FormatExt = "bin";
-    
-    private enum Ident {
-        Signal,
-        Audio,
-        Video
-    }
 
-    private static class RawData {
+    public static class RawData {
         private static readonly byte[] IdentIdent    = Encoding.ASCII.GetBytes("SHWID\0");
         public static readonly byte[] NoContentIdent = Encoding.ASCII.GetBytes("EMPTY_CONTENT\0");
         private static readonly byte[] DataEndIdent   = { 0x00 };
         
-        private static byte[] MakeIdent(byte[] bytes) {
+        public static byte[] MakeIdent(byte[] bytes) {
             return IdentIdent.Concat(bytes).ToArray();
         }
 
@@ -27,12 +21,7 @@ public static class DataConverter {
 
         public delegate void DataWriterDelegate(BinaryWriter writer);
         public static void Write(BinaryWriter writer, Ident ident, DataWriterDelegate dataWriter, long length) {
-            byte[] identBytes = ident switch {
-                Ident.Signal => MakeIdent(new byte[] { 0x1A, /* Reserved */ 0x00 }),
-                Ident.Audio  => MakeIdent(new byte[] { 0x2A, /* Reserved */ 0x00 }),
-                Ident.Video  => MakeIdent(new byte[] { 0x3A, /* Reserved */ 0x00 }),
-                _ => throw new Exception("Ident byte form not specified")
-            };
+            byte[] identBytes = Idents.toBytes(ident);
             writer.Write(identBytes);
             writer.Write(MakeInfo(length));
             dataWriter(writer);

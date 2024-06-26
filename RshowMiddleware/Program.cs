@@ -10,7 +10,7 @@ using RshowMiddleware;
 
 internal static class Program {
     private const string InputPath = "D:/Creative Engineering/Show tapes/Monkees Medley.rshw";
-    private const string OutputPath = $"C:/Users/FlooferLand/Desktop/Monkees-Medley.{DataConverter.FormatExt}";
+    private const string OutputPath = $"C:/Users/FlooferLand/Desktop/";
 
     private static void Main(string[] stringArgs) {
         // Argument parsing
@@ -53,7 +53,7 @@ internal static class Program {
         }
         
         // Main stuff
-        FileInfo outputInfo = new FileInfo(OutputPath);
+        FileInfo outputInfo = new FileInfo(Path.Combine(OutputPath, Args.Get("filename")?.GetString() ?? $"ShowTape.{DataConverter.FormatExt}"));
         using (var fileStream = outputInfo.Open(FileMode.Create)) {
             // Compression
             Stream stream;
