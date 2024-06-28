@@ -11,4 +11,9 @@
       <ProjectReference Include="..\Assembly-CSharp\Assembly-CSharp.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Aspose.Zip" Version="24.5.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
 </Project>
