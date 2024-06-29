@@ -66,6 +66,9 @@ public static class DataConverter {
         writer.Write(RawData.FileHeader);
         writer.Write(RawData.Version);
         writer.Write(new byte[] { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }); // Padding
+        writer.Write("Show title\0");
+        writer.Write("Song title\0");
+        writer.Write("Song artist\0");
 
         // Signal
         RawData.Write(writer, Ident.Signal, w => {
