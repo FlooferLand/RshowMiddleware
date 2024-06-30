@@ -9,8 +9,8 @@ public class rshwFile
     public int[] signalData { get; set; }
     
     public rshwFile() {
-        audioData = new byte[] { 0x69, 0x9, 0x11 };
-        signalData = new int[] { 0x69, 0x9, 0x11 };
+        audioData = new byte[] { 0xFA, 0xCC, 0xFA, 0xCC, 0xFA, 0xCC, 0xFA, 0xCC };
+        signalData = new int[] { 0xDA, 0xFD, 0xDA, 0xFD, 0xDA, 0xFD, 0xDA, 0xFD };
     }
     
     public void Save(string filePath)
@@ -33,7 +33,12 @@ public class rshwFormat
     public byte[] audioData { get; set; }
     public int[] signalData { get; set; }
     public byte[] videoData { get; set; }
-
+    
+    public rshwFormat() {
+        audioData = new byte[] { 0xFA, 0xCC, 0xFA, 0xCC, 0xFA, 0xCC, 0xFA, 0xCC };
+        signalData = new int[] { 0xDA, 0xFD, 0xDA, 0xFD, 0xDA, 0xFD, 0xDA, 0xFD };
+        videoData = new byte[] { 0xFE, 0xED, 0xFE, 0xED, 0xFE, 0xED, 0xFE, 0xED };
+    }
     
     public void Save(string filePath)
     {
